@@ -1,0 +1,97 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingStart="15dp"
+	android:paddingEnd="15dp"
+	android:orientation="vertical"
+	tools:ignore="MissingPrefix">
+
+	<TextView
+		android:id="@+id/article_detail_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:textColor="@android:color/black"
+		android:textSize="20sp"
+		fontPath="fonts/Cheltenham.ttf"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:baselineAligned="false"
+		android:orientation="horizontal">
+
+		<LinearLayout
+			android:layout_weight=".7"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content">
+			<TextView
+				android:id="@+id/article_detail_author"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:textSize="14sp"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_weight=".3"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content">
+			<TextView
+				android:id="@+id/article_detail_published_date"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:layout_marginStart="10dp"
+				android:textSize="14sp"
+				android:textAlignment="textEnd"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/article_detail_photo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		android:adjustViewBounds="true"
+		android:layout_gravity="center_horizontal"
+		android:scaleType="fitCenter"/>
+
+	<TextView
+		android:id="@+id/article_detail_photo_caption"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:textSize="14sp"/>
+
+	<TextView
+		android:id="@+id/article_detail_photo_copyright"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textAlignment="textEnd"
+		android:textColor="@color/material_dark_gray"
+		android:textSize="14sp"/>
+
+	<TextView
+		android:id="@+id/article_detail_summary"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		android:textColor="@android:color/black"
+		android:textSize="16sp"/>
+
+	<Button
+		android:id="@+id/article_detail_read_full_article_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="20dp"
+		android:background="@color/colorPrimary"
+		android:text="@string/button_article_detail_read_full_article"
+		android:textColor="@android:color/white"
+		android:textSize="18sp"
+		fontPath="fonts/Cheltenham.ttf"/>
+
+</LinearLayout>

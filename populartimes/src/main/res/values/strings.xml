@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">Popular Times</string>
+	<string name="title_article_overview">NY Times Most Popular</string>
+	<string name="title_article_detail">Article Detail</string>
+	<string name="button_article_detail_read_full_article">Read full article</string>
+	<string name="error_query_could_not_be_performed">The articles could not be loaded from the server. Please check your internet connection.</string>
+</resources>

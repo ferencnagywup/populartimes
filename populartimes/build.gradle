@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "hu.wup.ferencnagy.populartimes"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_API_URL", "\"http://api.nytimes.com/svc/mostpopular/v2/mostviewed/\""
+            buildConfigField "String", "SELECTED_ARTICLE_KEY", "\"selected_article\""
+            buildConfigField "String", "API_KEY", "\"e83d7cc579244879a56abf5a4b85259c\""
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_API_URL", "\"http://api.nytimes.com/svc/mostpopular/v2/mostviewed/\""
+            buildConfigField "String", "SELECTED_ARTICLE_KEY", "\"selected_article\""
+            buildConfigField "String", "API_KEY", "\"e83d7cc579244879a56abf5a4b85259c\""
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+
+    compile 'com.google.code.gson:gson:2.8.1'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    compile 'jp.wasabeef:picasso-transformations:2.1.2'
+
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+}
